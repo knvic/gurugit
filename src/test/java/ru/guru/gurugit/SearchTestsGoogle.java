@@ -20,8 +20,9 @@ public class SearchTestsGoogle {
     }*/
 
     @Test
-    void successfulSearchTest() {
-        Configuration.holdBrowserOpen = true;
+    void googleTest() {
+        Configuration.pageLoadStrategy = "eager";
+        // Configuration.holdBrowserOpen = true;
         open("https://www.google.com/");
         $("[name=q]").setValue("selenide").pressEnter();
        // $("[id=search]").shouldHave(text("https://ru.selenide.org"));
